@@ -7,7 +7,8 @@ class UsersController extends AppController {
     $this->layout = 'login';
   }
   public function login(){
-
+      $title = 'Login | Pruebas';
+      $this->set(compact('title'));
   }
 
 }

@@ -12,9 +12,9 @@ if (file_exists(dirname(__FILE__) . '/css/' . basename(__FILE__, 'ctp') . 'css')
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="spa">
 <head>
-	<title>Login V7</title>
+	<title>Login</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
