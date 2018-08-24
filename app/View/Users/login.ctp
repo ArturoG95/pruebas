@@ -27,19 +27,12 @@ if (file_exists(dirname(__FILE__) . '/css/' . basename(__FILE__, 'ctp') . 'css')
 					<span class="login100-form-title p-b-40">
 						Login
 					</span>
-
-					<div>
-						<a href="#" class="btn-login-with bg1 m-b-10">
-							<i class="fa fa-facebook-official"></i>
-							Login with Facebook
-						</a>
-					</div>
-
-					<div class="text-center p-t-55 p-b-30">
-						<span class="txt1">
-							Login with email
-						</span>
-					</div>
+          <div>
+            <a href="#" class="btn-login-with bg1 m-b-10">
+              <i class="fab fa-facebook-square"></i>
+              Login with Facebook
+            </a>
+          </div>
 
 					<div class="wrap-input100 validate-input m-b-16" data-validate="Please enter email: ex@abc.xyz">
 						<input class="input100" type="text" name="email" placeholder="Email">
@@ -48,7 +41,7 @@ if (file_exists(dirname(__FILE__) . '/css/' . basename(__FILE__, 'ctp') . 'css')
 
 					<div class="wrap-input100 validate-input m-b-20" data-validate = "Please enter password">
 						<span class="btn-show-pass">
-							<i class="fa fa fa-eye"></i>
+							<i class="fa fa-eye"></i>
 						</span>
 						<input class="input100" type="password" name="pass" placeholder="Password">
 						<span class="focus-input100"></span>
@@ -62,11 +55,11 @@ if (file_exists(dirname(__FILE__) . '/css/' . basename(__FILE__, 'ctp') . 'css')
 
 					<div class="flex-col-c p-t-224">
 						<span class="txt2 p-b-10">
-							Don’t have an account?
+							Crea tu cuenta
 						</span>
 
 						<a href="#" class="txt3 bo1 hov1">
-							Sign up now
+							Regístrate
 						</a>
 					</div>
 
