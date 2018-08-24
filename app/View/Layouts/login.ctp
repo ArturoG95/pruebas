@@ -24,6 +24,7 @@
     	<?php
             echo $this->Html->css(array(
                 'bootstrap.min',
+                'login'
             ));
         ?>
         <?php echo '<style type="text/css">'.$this->fetch('cssHead').'</style>'; ?>
