@@ -33,11 +33,6 @@ if (file_exists(dirname(__FILE__) . '/css/' . basename(__FILE__, 'ctp') . 'css')
 							<i class="fa fa-facebook-official"></i>
 							Login with Facebook
 						</a>
-
-						<a href="#" class="btn-login-with bg2">
-							<i class="fa fa-twitter"></i>
-							Login with Twitter
-						</a>
 					</div>
 
 					<div class="text-center p-t-55 p-b-30">
