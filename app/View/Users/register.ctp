@@ -34,16 +34,22 @@ if (file_exists(dirname(__FILE__) . '/js/' . basename(__FILE__, 'ctp') . 'js')) 
             <span class="focus-input100"></span>
           </div>
 
-          <div class="wrap-input100 validate-input m-b-20">
+          <div class="wrap-input100 validate-input m-b-16">
             <input class="input100" type="password" name="register_lastname" placeholder="Apellidos">
+            <span class="focus-input100"></span>
+          </div>
+          <div class="wrap-input100 validate-input m-b-16">
+            <span class="btn-show-pass docs-datepicker-trigger" disabled>
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+            </span>
+            <input id="registerBirth" type="text" class="input100 docs-date" name="date" placeholder="Selecciona tu fecha" readonly="readonly">
             <span class="focus-input100"></span>
           </div>
 					<div class="wrap-input100 validate-input m-b-16">
 						<input class="input100" type="text" name="email" placeholder="Email">
 						<span class="focus-input100"></span>
 					</div>
-
-					<div class="wrap-input100 validate-input m-b-20">
+					<div class="wrap-input100 validate-input m-b-16">
 						<span class="btn-show-pass">
 							<i id="show_pass" class="fa fa-eye"></i>
 						</span>
