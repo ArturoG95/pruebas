@@ -24,7 +24,9 @@
     	<?php
             echo $this->Html->css(array(
                 'bootstrap.min',
-                'login'
+                'login',
+                'datepicker/datepicker',
+                'datepicker/datepicker-main',
             ));
         ?>
         <?php echo '<style type="text/css">'.$this->fetch('cssHead').'</style>'; ?>
@@ -39,6 +41,8 @@
             echo $this->Html->script(array(
                 'jquery',
                 'bootstrap.min',
+                'datepicker/datepicker',
+                'datepicker/datepicker-main',
             ));
         ?>
         <script><?php echo $this->fetch('scriptBody'); ?></script>
