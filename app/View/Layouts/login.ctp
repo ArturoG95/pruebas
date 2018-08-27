@@ -43,6 +43,11 @@
                 'bootstrap.min',
                 'datepicker/datepicker',
                 'datepicker/datepicker-main',
+                'jquery-ui.min',
+                'noty/packaged/jquery.noty.packaged.min',
+                'main',
+                'jquery.center.min',
+                'jquery.msg.min', // block ui
             ));
         ?>
         <script><?php echo $this->fetch('scriptBody'); ?></script>
