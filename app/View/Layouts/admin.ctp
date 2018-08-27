@@ -54,7 +54,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               echo $this->Html->script(array(
                   'jquery',
                   'bootstrap.min',
-                  'AdminLTE.min'
+                  'AdminLTE.min',
               ));
           ?>
           <script><?php echo $this->fetch('scriptBody'); ?></script>

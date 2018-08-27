@@ -13,7 +13,6 @@ if (file_exists(dirname(__FILE__) . '/js/' . basename(__FILE__, 'ctp') . 'js')) 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100 p-t-90 p-b-30">
@@ -22,38 +21,37 @@ if (file_exists(dirname(__FILE__) . '/js/' . basename(__FILE__, 'ctp') . 'js')) 
             Registrarse
           </span>
 
-          <div>
-            <a href="#" class="btn-login-with bg1 m-b-10">
+          <div class="init_with_facebook">
+            <a id="register_facebook" class="btn-login-with bg1 m-b-10">
               <i class="fab fa-facebook-square"></i>
               Registrarte
             </a>
           </div>
 				<form id="registerForm" class="login100-form validate-form">
           <div class="wrap-input100 validate-input m-b-16">
-            <input class="input100" type="text" name="register_name" placeholder="Nombre">
+            <input id="registerFacebookID" class="input100" type="hidden" name="register_facebook_id" placeholder="Id FB">
             <span class="focus-input100"></span>
           </div>
-
           <div class="wrap-input100 validate-input m-b-16">
-            <input class="input100" type="password" name="register_lastname" placeholder="Apellidos">
+            <input id="registerName" class="input100" type="text" name="register_name" placeholder="Nombre">
             <span class="focus-input100"></span>
           </div>
+					<div class="wrap-input100 validate-input m-b-16">
+						<input id="registerEmail" class="input100" type="text" name="register_email" placeholder="Email">
+						<span class="focus-input100"></span>
+					</div>
           <div class="wrap-input100 validate-input m-b-16">
             <span class="btn-show-pass docs-datepicker-trigger" disabled>
               <i class="fa fa-calendar" aria-hidden="true"></i>
             </span>
-            <input id="registerBirth" type="text" class="input100 docs-date" name="date" placeholder="Selecciona tu fecha" readonly="readonly">
+            <input id="registerBirth" type="text" class="input100 docs-date" name="register_birthday" placeholder="Selecciona tu fecha" readonly="readonly">
             <span class="focus-input100"></span>
           </div>
-					<div class="wrap-input100 validate-input m-b-16">
-						<input class="input100" type="text" name="email" placeholder="Email">
-						<span class="focus-input100"></span>
-					</div>
 					<div class="wrap-input100 validate-input m-b-16">
 						<span class="btn-show-pass">
 							<i id="show_pass" class="fa fa-eye"></i>
 						</span>
-						<input id="register_pass" class="input100" type="password" name="pass" placeholder="Password">
+						<input id="register_pass" class="input100" type="password" name="register_password" placeholder="Password">
 						<span class="focus-input100"></span>
 					</div>
 
