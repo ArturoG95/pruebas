@@ -42,9 +42,6 @@ if (file_exists(dirname(__FILE__) . '/js/' . basename(__FILE__, 'ctp') . 'js')) 
 						<span class="focus-input100"></span>
 					</div>
           <div class="form-group validate-input">
-            <span class="btn-show-date docs-datepicker-trigger">
-              <i class="fa fa-calendar" aria-hidden="true" top='-15px'></i>
-            </span>
             <input id="registerBirth" type="text" class="input100 docs-date" name="register_birthday" placeholder="Selecciona tu fecha: Mes/Día/Año">
             <span class="focus-input100"></span>
           </div>

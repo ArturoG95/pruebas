@@ -117,18 +117,22 @@ $('#registerForm').validate({
     },
     unhighlight: function (element) {
         $(element).closest('.input100').removeClass('has-error');
-        if($('#registerBirthday').val() != ''){
-          $('.btn-show-pass').removeAttr('style');
-          $('.btn-show-pass').css("top", "0");
-        }
-        if($('#registerPassword').val() != ''){
-          $('.btn-show-pass').removeAttr('style');
-          $('.btn-show-date').css("top", "-15px");
-        }
+
     },
     success: function (label) {
         label.closest('.input100').removeClass('has-error');
         label.remove();
+        if($('#registerBirth').val() != ''){
+          $('.btn-show-date').removeAttr('style');
+        }else{
+          $('.btn-show-pass').css("top", "0");
+        }
+        if($('#register_pass').val() != ''){
+          $('.btn-show-pass').removeAttr('style');
+          $('.btn-show-date').css("top", "-15px");
+        }else{
+          $('.btn-show-date').css("top", "-15px");
+        }
     },
     errorPlacement: function (error, element) {
         error.insertAfter(element);
@@ -162,8 +166,4 @@ $('#registerForm').submit(function( event ) {
               sendNoty("error","No se guardo ERROR");
         }
     });
-});
-
-$('#registerBirthday').click(function() {
-  alert('salio del registerBirthday');
 });
