@@ -3318,6 +3318,36 @@ iframe {
   color: #111111;
 }
 
+.btn-show-date {
+  font-size: 15px;
+  color: #aaaaaa;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  z-index: 200;
+  height: 100%;
+  top: 0;
+  right: 25px;
+  padding: 0 5px;
+  cursor: pointer;
+  -webkit-transition: background 0.4s;
+  -o-transition: background 0.4s;
+  -moz-transition: background 0.4s;
+  transition: background 0.4s;
+}
+
+.btn-show-date:hover {
+  color: #111111;
+}
+
+.btn-show-date.active {
+  color: #111111;
+}
 /*------------------------------------------------------------------
 [ Button ]*/
 .container-login100-form-btn {

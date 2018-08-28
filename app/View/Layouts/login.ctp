@@ -43,8 +43,9 @@
                 'bootstrap.min',
                 'datepicker/datepicker',
                 'datepicker/datepicker-main',
-                'jquery-ui.min',
                 'noty/packaged/jquery.noty.packaged.min',
+                'jquery.validate',
+                'jquery.validate.additional-methods',
                 'main',
                 'jquery.center.min',
                 'jquery.msg.min', // block ui

@@ -21,16 +21,16 @@ function register_with_facebook() {
         if (response.status === 'connected') {
             // Logged into your app and Facebook.
             FB.api('/me?fields=id,name,email,picture', function (response) {
-                alert('Ya tiene una cuenta ligada a facebook, inicie sesion.');
+                sendNoty('warning','Ya tiene una cuenta ligada a facebook, inicie sesion.');
             });
         } else {
             FB.login(function (response) {
                 if (response.authResponse) {
                     FB.api('/me?fields=id,name,email', function (response) {
                       $('#registerFacebookID').val(response.id);
-                        $('#registerEmail').val(response.email).attr('readonly',true);
-                        $('#registerName').val(response.name).attr('readonly',true);;
-
+                        $('#registerEmail').val(response.email);
+                        $('#registerName').val(response.name);
+                        $('.init_with_facebook').hide();
                         var facebook_id = document.createElement('input');
                         facebook_id.value = response.id;
                         facebook_id.type = 'hidden';
@@ -77,7 +77,68 @@ function register_with_facebook() {
 
 });
 
-function register_data() {
+$('#registerForm').validate({
+    errorElement:'span',
+    errorClass: 'help-block help-block-error',
+    focusInvalid: true,
+    ignore: "register_facebook_id",
+    rules: {
+        'register_name': {
+            required: true
+        },
+        'register_email': {
+            required: true
+        },
+        'register_birthday': {
+            required: true
+        },
+        'register_password': {
+            required: true
+        }
+    },
+    messages: {
+        'register_name': {
+            required: 'Ingresa tu nombre'
+        },
+        'register_email': {
+            required: 'Ingresa tu correo electronico.',
+        },
+        'register_birthday': {
+            required: 'Por favor, registra tu cumpleaños.'
+        },
+        'register_password': {
+            required: 'Por favor, escribe una contraseña.',
+        }
+    },
+    highlight: function (element) {
+        $(element).closest('.input100').addClass('has-error');
+        $('.btn-show-date').css("top", "-15px");
+        $('.btn-show-pass').css("top", "-15px");
+    },
+    unhighlight: function (element) {
+        $(element).closest('.input100').removeClass('has-error');
+        if($('#registerBirthday').val() != ''){
+          $('.btn-show-pass').removeAttr('style');
+          $('.btn-show-pass').css("top", "0");
+        }
+        if($('#registerPassword').val() != ''){
+          $('.btn-show-pass').removeAttr('style');
+          $('.btn-show-date').css("top", "-15px");
+        }
+    },
+    success: function (label) {
+        label.closest('.input100').removeClass('has-error');
+        label.remove();
+    },
+    errorPlacement: function (error, element) {
+        error.insertAfter(element);
+    }
+});
+
+$('#registerForm').submit(function( event ) {
+  event.preventDefault();
+    if (!$("#registerForm").valid())
+        return false;
   $.ajax({
         type: 'POST',
         url: 'http://localhost:8888/3raVencida/users/do_register',
@@ -90,21 +151,19 @@ function register_data() {
           console.log(data);
             if(data.result == "ok"){
               unblockUI();
-
-              alert("Información registrada correctamente");
-              window.location.href = 'http://localhost:8888/3raVencida/';
+              sendNoty("success","Información registrada correctamente");
+              $('#registerForm')[0].reset();
             }
             else{
-              alert("No se guardo ELSE");
+              sendNoty("error","No se guardo ELSE");
             }
         },
         error: function(){
-              alert("No se guardo ERROR");
+              sendNoty("error","No se guardo ERROR");
         }
     });
-}
+});
 
-$('#registerForm').submit(function( event ) {
-  event.preventDefault();
-  register_data();
+$('#registerBirthday').click(function() {
+  alert('salio del registerBirthday');
 });

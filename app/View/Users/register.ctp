@@ -28,26 +28,27 @@ if (file_exists(dirname(__FILE__) . '/js/' . basename(__FILE__, 'ctp') . 'js')) 
             </a>
           </div>
 				<form id="registerForm" class="login100-form validate-form">
-          <div class="wrap-input100 validate-input m-b-16">
+
+          <div class="form-group">
             <input id="registerFacebookID" class="input100" type="hidden" name="register_facebook_id" placeholder="Id FB">
             <span class="focus-input100"></span>
           </div>
-          <div class="wrap-input100 validate-input m-b-16">
+          <div class="form-group validate-input">
             <input id="registerName" class="input100" type="text" name="register_name" placeholder="Nombre">
             <span class="focus-input100"></span>
           </div>
-					<div class="wrap-input100 validate-input m-b-16">
+					<div class="form-group validate-input">
 						<input id="registerEmail" class="input100" type="text" name="register_email" placeholder="Email">
 						<span class="focus-input100"></span>
 					</div>
-          <div class="wrap-input100 validate-input m-b-16">
-            <span class="btn-show-pass docs-datepicker-trigger" disabled>
-              <i class="fa fa-calendar" aria-hidden="true"></i>
+          <div class="form-group validate-input">
+            <span class="btn-show-date docs-datepicker-trigger">
+              <i class="fa fa-calendar" aria-hidden="true" top='-15px'></i>
             </span>
-            <input id="registerBirth" type="text" class="input100 docs-date" name="register_birthday" placeholder="Selecciona tu fecha" readonly="readonly">
+            <input id="registerBirth" type="text" class="input100 docs-date" name="register_birthday" placeholder="Selecciona tu fecha: Mes/Día/Año">
             <span class="focus-input100"></span>
           </div>
-					<div class="wrap-input100 validate-input m-b-16">
+					<div class="from-group validate-input m-b-16">
 						<span class="btn-show-pass">
 							<i id="show_pass" class="fa fa-eye"></i>
 						</span>
@@ -55,7 +56,7 @@ if (file_exists(dirname(__FILE__) . '/js/' . basename(__FILE__, 'ctp') . 'js')) 
 						<span class="focus-input100"></span>
 					</div>
 
-					<div class="container-login100-form-btn">
+					<div class="container-login100-form-btn m-b-16">
 
 						<button class="login100-form-btn" type="submit">
 							Registrarse

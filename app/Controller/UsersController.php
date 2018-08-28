@@ -22,6 +22,7 @@ class UsersController extends AppController {
         $this->viewClass = 'json';
         if ($this->request->is('ajax') && $this->request->is('post') && !empty($this->request->data)) {
             $this->User->create();
+            $this->request->data['register_birthday'] = date('Y-m-d', strtotime($this->request->data['register_birthday']));
             $register = $this->User->save($this->request->data);
             }
             $this->set(array(
