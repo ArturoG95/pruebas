@@ -142,6 +142,7 @@ $('#registerForm').validate({
 $('#registerForm').submit(function( event ) {
   event.preventDefault();
     if (!$("#registerForm").valid())
+      sendNoty("warning","Favor de llenar todos los campos.");
         return false;
   $.ajax({
         type: 'POST',

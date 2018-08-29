@@ -44,11 +44,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       		<?php echo $this->Flash->render(); ?>
       		<?php echo '<div class="content-wrapper">'.$this->fetch('content').'</div>'; ?>
       	</main>
-        <footer><?php echo $this->element('footer')?></footer>
-        <aside class="control-sidebar control-sidebar-dark">
-            <?php echo $this->element('right-sidebar')?>
-        </aside>
-        <div class="control-sidebar-bg"></div>
+        <footer><?php echo $this->element('footer')?></footer>        
         </div>
       	<?php
               echo $this->Html->script(array(

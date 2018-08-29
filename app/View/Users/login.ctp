@@ -29,16 +29,16 @@ if (file_exists(dirname(__FILE__) . '/js/' . basename(__FILE__, 'ctp') . 'js')) 
             </a>
           </div>
 				<form id="loginForm" class="login100-form validate-form">
-					<div class="wrap-input100 validate-input m-b-16" data-validate="Please enter email: ex@abc.xyz">
+					<div class="form-group m-b-16" data-validate="Please enter email: ex@abc.xyz">
 						<input class="input100" type="text" name="email" placeholder="Email">
 						<span class="focus-input100"></span>
 					</div>
 
-					<div class="wrap-input100 validate-input m-b-20" data-validate = "Please enter password">
+					<div class="form-group m-b-20" data-validate = "Please enter password">
 						<span class="btn-show-pass">
 							<i id="show_pass" class="fa fa-eye"></i>
 						</span>
-						<input id="login_pass" class="input100" type="password" name="pass" placeholder="Password">
+						<input id="login_pass" class="input100" type="password" name="password" placeholder="Password">
 						<span class="focus-input100"></span>
 					</div>
 
@@ -49,7 +49,7 @@ if (file_exists(dirname(__FILE__) . '/js/' . basename(__FILE__, 'ctp') . 'js')) 
 						</button>
 					</div>
         </form>
-					<div class="flex-col-c p-t-150">
+					<div class="flex-col-c p-t-120">
 						<span class="txt2 p-b-10">
 							Crea tu cuenta
 						</span>

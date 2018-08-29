@@ -22,14 +22,19 @@
         <!-- Menu Toggle Button -->
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
           <!-- The user image in the navbar-->
-          <span class="hidden-xs">Arturo Garcia</span>
+          <span class="hidden-xs"><?php echo AuthComponent::user('User.register_name'); ?></span>
         </a>
         <ul class="dropdown-menu">
           <!-- The user image in the menu -->
           <li class="user-header">
             <p>
-              Arturo Garcia - Web Developer
-              <small>Member since Aug. 2018</small>
+              <?php echo AuthComponent::user('User.register_name'); ?>
+            </p>
+            <p>
+              Incorporado desde :
+              <span>
+              <?php echo date('d/m/Y',strtotime(AuthComponent::user('User.created'))); ?>
+            </span>
             </p>
           </li>
           <!-- Menu Footer-->
@@ -38,7 +43,7 @@
               <a href="#" class="btn btn-default btn-flat">Profile</a>
             </div>
             <div class="pull-right">
-              <a href="#" class="btn btn-default btn-flat">Sign out</a>
+              <a href="/3raVencida/users/logout" class="btn btn-default btn-flat">Sign out</a>
             </div>
           </li>
         </ul>
